@@ -1,0 +1,152 @@
+.header {
+    background: #FFF;
+    display: grid;
+    grid-template-columns: 1fr 1fr max-content max-content;
+    justify-items: stretch;
+    align-items: center;
+    width: 96%;
+    margin:0 2%;
+    margin-top:36px;
+    padding:32px 0;
+    font-family: 'Work Sans', sans-serif;
+    border-bottom: 2px solid #000;
+    position: sticky;
+    top: 0;
+}
+
+.burger {
+    width: 50px;
+    height: 40px;
+    background: #FFF;
+    border-radius:10%;
+    display:none;
+}
+.lines {
+    position: fixed;
+    margin-top: 8px;
+    width: 40px;
+    height: 4px;
+    margin-left: 5px;
+    background: #000;
+    border-radius:20px;
+}
+
+.lines:nth-child(1) {
+    transform: translateY(10px);
+}
+
+.lines:nth-child(3){
+    transform:translateY(20px);
+}
+
+.logo {
+    justify-self: start;
+    transition: transform .2s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.logo:active {
+    transform: scale(1);
+}
+
+.image__logo {
+    overflow: hidden;
+    object-position: center;
+    padding-right: 1vw;
+    cursor: pointer;
+}
+
+.types {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 32px;
+    text-align: center;
+}
+
+.links {
+    color: #000;
+    text-decoration: none;
+    font-size: calc(10px + 5 * (100vw / 1440));
+    font-weight: 400;
+    transition: color .2s ease;
+}
+
+.links:hover {
+    color: #1987D7;
+}
+
+.links:active {
+    color:#000000;
+}
+
+.button__first {
+    margin: 0 14px;
+    color: #FFF;
+    font-size: calc(10px + 5 * (100vw / 1440));
+    width: calc(100px + 20 * (100vw / 1440));
+    height: 35px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    background: #000000;
+    border-radius: 6px;
+    border: none;
+    transition: transform .2s ease;
+    justify-self: end;
+}
+
+.button__first:active {
+    transform:scale(0.9);
+}
+
+.block__buttons {
+    justify-self: start;
+    padding-left:1vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    border-left: 2px solid #000;
+}
+
+.buttons__second {
+    background: #FFF;
+    width: calc(20px + 14 * (100vw / 1440));
+    height: calc(20px + 14 * (100vw / 1440));
+    border-radius: 50%;
+    font-size: calc(10px + 3 * (100vw / 1440));
+    font-weight: 400;
+    border: 1px solid #000000;
+    cursor:pointer;
+    transition: background-color .2s ease, color .2s ease , transform .2s ease
+}
+
+.buttons__second:hover {
+    color:#FFF;
+    background-color:#000;
+}
+
+.buttons__second:active {
+    transform: scale(0.9);
+}
+@media (max-width:960px) {
+.header {
+    border-bottom:none;
+    width: 100%;
+    margin: 0 ;
+}
+.button__first, .block__buttons, .types {
+    display: none;
+}
+
+.burger {
+    display: block;
+    margin-left: 5%;
+}
+
+.logo {
+    justify-self: end;
+}
+}
