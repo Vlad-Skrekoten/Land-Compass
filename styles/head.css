@@ -113,11 +113,11 @@
 
 .buttons__second {
     background: #FFF;
-    width: calc(20px + 14 * (100vw /1440));
-    height: calc(20px + 14 * (100vw /1440));
+    width: calc(20px + 14 * (100vw / 1440));
+    height: calc(20px + 14 * (100vw / 1440));
     border-radius: 50%;
-    font-size: 13px;
-    font-weight: bold;
+    font-size: calc(10px + 3 * (100vw / 1440));
+    font-weight: 400;
     border: 1px solid #000000;
     cursor:pointer;
     transition: background-color .2s ease, color .2s ease , transform .2s ease
