@@ -113,6 +113,7 @@
     .text__first {
         font-size: 100px;
     }
+
     .text__first-two {
         font-size: 32px;
     }
@@ -150,12 +151,12 @@
 
     .what__we-do {
         margin-top: 30px;
-        border-bottom:none;
+        border-bottom: none;
     }
 
     .type__block:nth-child(1),
     .type__block:nth-child(3) {
-        border-right:none;
+        border-right: none;
     }
 
     .lighttext__type-block {
@@ -171,19 +172,19 @@
 
     .maintext__type-block {
         font-size: 18px;
-        border-right:2px solid #000;
+        border-right: 2px solid #000;
         width: 100%;
         padding: 10px;
     }
 
     .types__blocks {
         grid-template-columns: auto;
-        gap:20px;
+        gap: 20px;
     }
 
     .type__block {
-        border-bottom:2px solid #000;
-        padding:10px;
+        border-bottom: 2px solid #000;
+        padding: 10px;
     }
 
     .image__blocks {
