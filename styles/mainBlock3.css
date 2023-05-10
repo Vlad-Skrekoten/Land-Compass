@@ -1,0 +1,124 @@
+.main {
+    display: grid;
+    justify-content: center;
+}
+
+.block-3 {
+    display: grid;
+    padding: 2%;
+}
+
+.block-3__types {
+    padding: 2%;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.block-3__types-left {
+    padding: 2%;
+    margin:2% 0;
+    display: grid;
+    grid-template-columns: auto;
+    justify-items: stretch;
+}
+
+.block-3__types-lighttext {
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400;
+    justify-self: start;
+}
+
+.block-3___types-maintext {
+    color: #191919;
+    font-family: 'Syne';
+    font-weight: 500;
+    font-size: calc(30px + 50 * (100vw / 1440));
+    max-width: 1100px;
+    width: 100%;
+    justify-self: start;
+}
+
+.block-3__style {
+    overflow: hidden;
+    object-position: center;
+    object-fit: cover;
+}
+
+.block-3__types-right {
+    border-left: 2px solid #000;
+    padding:6%;
+    max-width: 520px;
+    display: grid;
+}
+
+.block-3__types-text-2 {
+    display: grid;
+    align-items:stretch;
+    gap: 10%;
+}
+
+.block-3__types-middletext {
+    align-self:center;
+    font-size: calc(12px + 12 * (100vw / 1440));
+    font-weight: 400;
+    color: #191919;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.block-3__button {
+
+    color: #FFF;
+    background: #000;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400;
+    width: 160px;
+    height: 30px;
+    border: none;
+    border-radius: 6px;
+    transition: transform .2s ease;
+}
+
+.block-3__button:active {
+    transform: scale(0.9);
+}
+
+
+@media (min-width:1440px) {
+    .block-3__types-lighttext  {
+        font-size: 15px;
+    }
+
+    .block-3___types-maintext {
+        font-size: 80px;
+    }
+
+    .block-3__types-middletext {
+        font-size: 24px;
+    }
+}
+
+@media (max-width:600px) {
+.block-3__types {
+    border-top: none;
+    grid-template-columns: auto;
+}
+
+.block-3__types-lighttext {
+    display: none;
+}
+
+.block-3__types-right {
+    border:none;
+}
+
+.block-3__types-text-2 {
+    justify-items: center;
+}
+
+}

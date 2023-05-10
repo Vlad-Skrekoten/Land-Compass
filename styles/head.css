@@ -90,6 +90,7 @@
     font-size: calc(10px + 5 * (100vw / 1440));
     width: calc(100px + 20 * (100vw / 1440));
     height: 35px;
+    font-family: 'Roboto Condensed', sans-serif;
     letter-spacing: 1px;
     font-weight: 400;
     background: #000000;
