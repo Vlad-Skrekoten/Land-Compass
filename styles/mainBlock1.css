@@ -52,7 +52,7 @@
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 700;
     font-size: calc(18px + 30 * (100vw /1440));
-    border-right: 2px solid #000;
+    border-right: 1px solid #000;
 }
 
 .types__blocks {
@@ -69,7 +69,7 @@
 
 .type__block:nth-child(1),
 .type__block:nth-child(3) {
-    border-right: 2px solid #000;
+    border-right: 1px solid #000;
 }
 
 .text__type-block {

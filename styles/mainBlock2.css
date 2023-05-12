@@ -25,14 +25,14 @@
 .firstimage__block-2 {
     margin-top: 5%;
     padding-bottom: 20px;
-    border-bottom: 2px solid #000;
+    border-bottom: 1px solid #000;
 }
 
 .text__block-2 {
     max-width: 530px;
     margin-right: 5%;
     width: 100%;
-    border-right: 2px solid;
+    border-right: 1px solid #000;
 }
 
 .maintext__block-2 {
