@@ -219,6 +219,7 @@
 }
 
 @media (max-width:600px) {
+
     .block-3__types {
         border-top: none;
         grid-template-columns: auto;
