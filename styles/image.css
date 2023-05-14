@@ -1,0 +1,12 @@
+.image {
+    transition:opacity.2s ease,  transform .2s ease;
+    cursor: pointer;
+}
+
+.image:hover {
+    opacity: 0.9;
+}
+
+.image:active {
+    transform: scale(0.95);
+}

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+
 .header {
     background: #FFF;
     display: grid;
@@ -12,9 +14,10 @@
     border-bottom: 2px solid #000;
     position: sticky;
     top: 0;
+    z-index: 1;
 }
 
-.burger {
+.header__burger {
     width: 50px;
     height: 40px;
     background: #FFF;
@@ -22,7 +25,7 @@
     display: none;
 }
 
-.lines {
+.burger__lines {
     position: fixed;
     margin-top: 8px;
     width: 40px;
@@ -32,24 +35,24 @@
     border-radius: 20px;
 }
 
-.lines:nth-child(1) {
+.burger__lines:nth-child(1) {
     transform: translateY(10px);
 }
 
-.lines:nth-child(3) {
+.burger__lines:nth-child(3) {
     transform: translateY(20px);
 }
 
-.logo {
+.header__logo {
     justify-self: start;
     transition: transform .2s ease;
 }
 
-.logo:hover {
+.header__logo:hover {
     transform: scale(1.1);
 }
 
-.logo:active {
+.header__logo:active {
     transform: scale(1);
 }
 
@@ -60,7 +63,7 @@
     cursor: pointer;
 }
 
-.types {
+.header__menu {
     list-style-type: none;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -68,7 +71,7 @@
     text-align: center;
 }
 
-.links {
+.menu-links {
     color: #000;
     text-decoration: none;
     font-size: calc(10px + 5 * (100vw / 1440));
@@ -76,32 +79,12 @@
     transition: color .2s ease;
 }
 
-.links:hover {
+.menu-links:hover {
     color: #1987D7;
 }
 
-.links:active {
+.menu-links:active {
     color: #000000;
-}
-
-.button__first {
-    margin: 0 14px;
-    color: #FFF;
-    font-size: calc(10px + 5 * (100vw / 1440));
-    width: calc(100px + 20 * (100vw / 1440));
-    height: 35px;
-    font-family: 'Roboto Condensed', sans-serif;
-    letter-spacing: 1px;
-    font-weight: 400;
-    background: #000000;
-    border-radius: 6px;
-    border: none;
-    transition: transform .2s ease;
-    justify-self: end;
-}
-
-.button__first:active {
-    transform: scale(0.9);
 }
 
 .block__buttons {
@@ -113,24 +96,31 @@
     border-left: 2px solid #000;
 }
 
-.buttons__second {
+.buttons__round {
     background: #FFF;
     width: calc(20px + 14 * (100vw / 1440));
     height: calc(20px + 14 * (100vw / 1440));
     border-radius: 50%;
     font-size: calc(10px + 3 * (100vw / 1440));
     font-weight: 400;
+    padding: 2%;
     border: 1px solid #000000;
     cursor: pointer;
     transition: background-color .2s ease, color .2s ease, transform .2s ease
 }
 
-.buttons__second:hover {
+.header__buttons-block {
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+}
+
+.buttons__round:hover {
     color: #FFF;
     background-color: #000;
 }
 
-.buttons__second:active {
+.buttons__round:active {
     transform: scale(0.9);
 }
 
@@ -141,18 +131,18 @@
         margin: 0;
     }
 
-    .button__first,
-    .block__buttons,
-    .types {
+    .header__button,
+    .header__buttons-block,
+    .header__menu {
         display: none;
     }
 
-    .burger {
+    .header__burger {
         display: block;
         margin-left: 5%;
     }
 
-    .logo {
+    .header__logo {
         justify-self: end;
     }
 }

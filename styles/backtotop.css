@@ -1,0 +1,36 @@
+.back-to-top {
+    background: #000;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 3%;
+    bottom: 3%;
+    transition: transform .2s ease, opacity .2s ease;
+    opacity: 0;
+}
+
+.go-top--show {
+    opacity: 1;
+}
+
+.back-to-top:hover {
+    transform: scale(0.9);
+}
+
+.back-to-top:active {
+    transform: scale(0.8);
+}
+
+.back-to-top svg {
+    fill: #ffffff;
+}
+
+.back-to-top.active {
+    bottom: 50px;
+    transition: 0.3s all;
+}
+
