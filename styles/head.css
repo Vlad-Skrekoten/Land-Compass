@@ -18,29 +18,65 @@
 }
 
 .header__burger {
+    position: fixed;
+    left: 5%;
     width: 50px;
     height: 40px;
-    background: #FFF;
+    background: gray;
     border-radius: 10%;
+    z-index: 1;
     display: none;
+    transition: background-color .4s ease;
+}
+
+.header.header_active .header__burger {
+    background: #FFF;
+}
+
+.header__burger-content {
+    display: grid;
+    justify-content: center;
+    align-items: center;
 }
 
 .burger__lines {
-    position: fixed;
-    margin-top: 8px;
+    display: block;
     width: 40px;
     height: 4px;
-    margin-left: 5px;
     background: #000;
     border-radius: 20px;
+    transition: transform .4s ease, color .4s ease, opacity .4s ease;
 }
 
 .burger__lines:nth-child(1) {
-    transform: translateY(10px);
+    transform:rotate(45deg) translateY(5px) ;
+}
+
+.burger__lines:nth-child(2) {
+    opacity: 0;
 }
 
 .burger__lines:nth-child(3) {
-    transform: translateY(20px);
+    transform: rotate(-45deg) translateY(-5px);
+}
+
+.header.header_active .burger__lines:nth-child(1) {
+    transform: translateY(-5px);
+}
+
+.header.header_active .burger__lines:nth-child(2) {
+    opacity: 1;
+}
+
+.header.header_active .burger__lines:nth-child(3) {
+    transform: translateY(5px);
+}
+
+.header__type {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
 }
 
 .header__logo {
@@ -125,24 +161,58 @@
 }
 
 @media (max-width:960px) {
+
     .header {
-        border-bottom: none;
         width: 100%;
         margin: 0;
+        display: flex;
+        justify-content: end;
     }
 
-    .header__button,
-    .header__buttons-block,
+    .header__type {
+        background: gray;
+        position: fixed;
+        max-width: 960px;
+        width: 100%;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        display: grid;
+        grid-template-columns: auto;
+        padding: 30px;
+        transition: transform .4s ease;
+    }
+
+    header.header_active .header__type {
+        transform: translateX(-150%);
+    }
+
     .header__menu {
+        display: grid;
+        grid-template-columns: auto;
+        margin-top: 20%;
+    }
+
+    .menu-links {
+        font-size: 18px;
+    }
+
+    .header__button {
+        margin-top: 10%;
+    }
+
+    .header__buttons-block {
         display: none;
     }
 
-    .header__burger {
-        display: block;
-        margin-left: 5%;
-    }
 
     .header__logo {
         justify-self: end;
+    }
+
+    .header__burger {
+        display: flex;
+        justify-content: center;
+        align-items:center;
     }
 }
