@@ -8,11 +8,10 @@
     align-items: center;
     width: 96%;
     margin: 0 2%;
-    margin-top: 36px;
     padding: 32px 0;
     font-family: 'Work Sans', sans-serif;
     border-bottom: 2px solid #000;
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 1;
 }
@@ -49,7 +48,7 @@
 }
 
 .burger__lines:nth-child(1) {
-    transform:rotate(45deg) translateY(5px) ;
+    transform: rotate(45deg) translateY(5px);
 }
 
 .burger__lines:nth-child(2) {
@@ -213,6 +212,6 @@
     .header__burger {
         display: flex;
         justify-content: center;
-        align-items:center;
+        align-items: center;
     }
 }
